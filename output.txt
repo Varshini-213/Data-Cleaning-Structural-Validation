@@ -1,0 +1,49 @@
+==================================================
+ORIGINAL DATA
+=============
+
+ID           Name   Age             Email        City
+0   1     John Smith  22.0    [john@gmail.com](mailto:john@gmail.com)   hyderabad
+1   2   Mary Johnson   NaN    [mary@gmail.com](mailto:mary@gmail.com)  Vijayawada
+2   3     John Smith  22.0    [john@gmail.com](mailto:john@gmail.com)   hyderabad
+3   4    David Kumar  25.0       david@gmail     chennai
+4   5      Sara Khan  21.0               NaN   bangalore
+5   6      Ravi Teja  23.0    [ravi@gmail.com](mailto:ravi@gmail.com)   Hyderabad
+6   7  Anjali Sharma   NaN  [anjali@gmail.com](mailto:anjali@gmail.com)  vijayawada
+7   8      Ravi Teja  23.0    [ravi@gmail.com](mailto:ravi@gmail.com)   Hyderabad
+8   9    Priya Reddy  20.0   [priya@gmail.com](mailto:priya@gmail.com)     CHENNAI
+9  10      Kiran Rao  24.0               NaN   Bangalore
+
+==================================================
+MISSING VALUES AFTER CLEANING
+=============================
+
+ID             0
+Name           0
+Age            0
+Email          0
+City           0
+Email_Valid    0
+dtype: int64
+
+==================================================
+CLEANED DATA
+============
+
+ID           Name   Age                Email        City  Email_Valid
+0   1     John Smith  22.0       [john@gmail.com](mailto:john@gmail.com)   Hyderabad         True
+1   2   Mary Johnson  22.5       [mary@gmail.com](mailto:mary@gmail.com)  Vijayawada         True
+3   4    David Kumar  25.0          david@gmail     Chennai        False
+4   5      Sara Khan  21.0  [unknown@example.com](mailto:unknown@example.com)   Bangalore         True
+5   6      Ravi Teja  23.0       [ravi@gmail.com](mailto:ravi@gmail.com)   Hyderabad         True
+6   7  Anjali Sharma  22.5     [anjali@gmail.com](mailto:anjali@gmail.com)  Vijayawada         True
+8   9    Priya Reddy  20.0      [priya@gmail.com](mailto:priya@gmail.com)     Chennai         True
+9  10      Kiran Rao  24.0  [unknown@example.com](mailto:unknown@example.com)   Bangalore         True
+
+==================================================
+DATA CLEANING SUMMARY
+=====================
+
+Total Records After Cleaning: 8
+Invalid Emails Found: 1
+Cleaned dataset saved as 'cleaned_data.csv'
